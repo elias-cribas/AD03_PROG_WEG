@@ -1,0 +1,64 @@
+
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Cadastro de Cursos</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+  <script src='cursos.js' async></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo-titulo">
+      <img class="logo" src="img/logo.png" alt="">
+      <h1>Cadastro de Cursos</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="professores.html">Cadastro de Professores</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <button id="addCurso">Adicionar Curso</button>
+    <table id="cursosTable">
+      <thead>
+        <tr>
+          <th>Nome do Curso</th>
+          <th>Sigla</th>
+          <th>Descrição</th>
+          <th>Coordenador</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Cursos serão inseridos aqui via JavaScript -->
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Modal para Adicionar/Editar Curso -->
+  <div id="cursoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Adicionar/Editar Curso</h2>
+      <form id="cursoForm">
+        <input type="hidden" id="codigo" name="codigo" required>
+        <label for="nomeCurso">Nome do Curso:</label>
+        <input type="text" id="nomeCurso" name="nomeCurso" required>
+        <label for="sigla">Sigla:</label>
+        <input type="text" id="sigla" name="sigla" required>
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" required></textarea>
+        <label for="coordenador">Coordenador:</label>
+        <input type="text" id="coordenador" name="coordenador" required>
+        <button type="submit">Salvar</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

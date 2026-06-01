@@ -1,0 +1,58 @@
+
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Cadastro Professores</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+  <script src='professores.js' async></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo-titulo">
+      <img class="logo" src="img/logo.png" alt="">
+      <h1>Cadastro Professores</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="cursos.html">Cadastro de Cursos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <button id="addProfessor">Adicionar Professor</button>
+    <table id="professoresTable">
+      <thead>
+        <tr>
+          <th>Nome do Professor:</th>
+          <th>Email:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Professores serão inseridos aqui via JavaScript -->
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Modal para Adicionar/Editar Professors -->
+  <div id="professorModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Adicionar/Editar Professor</h2>
+      <form id="professorForm">
+        <input type="hidden" id="codigo" name="codigo" required>
+        <label for="nomeProfessor">Nome do Professor:</label>
+        <input type="text" id="nomeProfessor" name="nomeProfessor" required>
+        <label for="emailProfessor">Email:</label>
+        <input type="text" id="emailProfessor" name="emailProfessor" required>
+        <button type="submit">Salvar</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
